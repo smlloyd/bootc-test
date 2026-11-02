@@ -1,0 +1,10 @@
+[Unit]
+Description=07a-shared
+
+[Container]
+# renovate: tag=1.6.20
+Image=docker.io/library/memcached@sha256:8b7a3ce027c33dc2142b3826dae320dacdb9987fa86267c15505a80147f926b7
+Exec=/bin/true
+
+[Install]
+WantedBy=default.target

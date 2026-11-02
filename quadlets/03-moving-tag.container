@@ -1,0 +1,10 @@
+[Unit]
+Description=03-moving-tag
+
+[Container]
+# renovate: tag=latest
+Image=docker.io/library/alpine@sha256:77726ef6b57ddf65bb551896826ec38bc3e53f75cdde31354fbffb4f25238ebd
+Exec=/bin/true
+
+[Install]
+WantedBy=default.target

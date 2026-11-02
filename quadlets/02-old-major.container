@@ -1,0 +1,10 @@
+[Unit]
+Description=02-old-major
+
+[Container]
+# renovate: tag=2.8.0
+Image=docker.io/library/registry@sha256:c26590bcf53822a542e78fab5c88e1dfbcdee91c1882f4656b7db7b542d91d97
+Exec=/bin/true
+
+[Install]
+WantedBy=default.target

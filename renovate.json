@@ -1,0 +1,32 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", "docker:pinDigests"],
+  "platformAutomerge": false,
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "packageRules": [{ "matchManagers": ["quadlet"], "enabled": false }],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker",
+      "managerFilePatterns": ["/.*\\.container$/"],
+      "matchStrings": [
+        "(?<indentation>\\n\\s*)Image\\s*=\\s*(?<depName>[a-zA-Z0-9/._-]+):(?<currentValue>[a-zA-Z0-9._-]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?"
+      ],
+      "matchStringsStrategy": "any",
+      "autoReplaceStringTemplate": "{{{indentation}}}Image={{{depName}}}:{{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}"
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker",
+      "managerFilePatterns": ["/.*\\.container$/"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*tag=(?<currentValue>[a-zA-Z0-9._-]+)\\s*\\n\\s*Image\\s*=\\s*(?<depName>[a-zA-Z0-9/._-]+)@(?<currentDigest>sha256:[a-f0-9]+)"
+      ],
+      "matchStringsStrategy": "any",
+      "autoReplaceStringTemplate": "# renovate: tag={{{newValue}}}\nImage={{{depName}}}@{{{newDigest}}}"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+[Unit]
+Description=06-no-comment
+
+[Container]
+Image=docker.io/library/redis@sha256:1b90dbfe6943c72a7469c134cad3f02eb810f016049a0e19ad78be07040cdb0c
+Exec=/bin/true
+
+[Install]
+WantedBy=default.target
