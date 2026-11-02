@@ -2,7 +2,7 @@
 Description=05-tag-and-digest
 
 [Container]
-Image=docker.io/library/nginx:1.26.0@sha256:192e88a0053c178683ca139b9d9a2afb0ad986d171fae491949fe10970dd9da9
+Image=docker.io/library/nginx:1.31.8@sha256:5ab5b0b01097420873a3f3330f44248e34a3c2a3e8d5ee30658aeae8cb7435da
 Exec=/bin/true
 
 [Install]
