@@ -2,8 +2,8 @@
 Description=08-v-prefix
 
 [Container]
-# renovate: tag=v3.0.0
-Image=docker.io/library/traefik@sha256:7996bdae8aaa70eaacf2978b6c949de5b68c0a24ddc3e40c06344ecc88cfaea3
+# renovate: tag=v3.7.17
+Image=docker.io/library/traefik@sha256:30ff62491aacdb862ceb8c9edcf2627da638d7deafdd4b6dab32fe34f8aa3e90
 Exec=/bin/true
 
 [Install]
