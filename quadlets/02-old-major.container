@@ -2,8 +2,8 @@
 Description=02-old-major
 
 [Container]
-# renovate: tag=2.8.0
-Image=docker.io/library/registry@sha256:c26590bcf53822a542e78fab5c88e1dfbcdee91c1882f4656b7db7b542d91d97
+# renovate: tag=3.1.2
+Image=docker.io/library/registry@sha256:d4032d4cc323c1731c707931ecada07a53076eac38e3b61ae57533f170f2c6c3
 Exec=/bin/true
 
 [Install]
